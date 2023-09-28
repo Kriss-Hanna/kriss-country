@@ -10,7 +10,6 @@
   padding: 1rem 1.5rem;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
-
   > div {
     cursor: pointer;
   }
@@ -47,9 +46,15 @@ body.dark-mode {
 
 .countries-container {
   border: 2px solid red;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .country-card {
-  border: 2px solid black;
-  width: 100%;
+  border: 2px solid black; 
   margin: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  width: 400px;
 }

@@ -1,8 +1,27 @@
-# React + Vite
+# Projet Affichage de Pays - Challenge Florin Pop
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bienvenue sur le répertoire GitHub de mon application React développée dans le cadre du challenge proposé par Florin Pop, sur l'affichage des pays.
 
-Currently, two official plugins are available:
+![Aperçu de l'application](url-de-votre-image)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Table des Matières
+- [Projet Affichage de Pays - Challenge Florin Pop](#projet-affichage-de-pays---challenge-florin-pop)
+  - [Table des Matières](#table-des-matières)
+  - [À Propos du Projet](#à-propos-du-projet)
+  - [Technologies Utilisées](#technologies-utilisées)
+  - [Fonctionnalités](#fonctionnalités)
+
+## À Propos du Projet
+Cette application a été créée comme une solution au challenge de Florin Pop. Elle permet aux utilisateurs de visualiser des informations détaillées sur différents pays. L'application est construite avec React et utilise une API pour récupérer les données des pays.
+
+## Technologies Utilisées
+- [React](https://reactjs.org/)
+- [CSS](https://www.w3.org/Style/CSS/Overview.en.html)
+- [Autres Librairies](#)
+
+## Fonctionnalités
+- Affichage d'une liste de pays avec des informations de base.
+- Recherche de pays par nom.
+- Filtrage de pays par région.
+- Affichage de détails supplémentaires sur un pays sélectionné.
+
