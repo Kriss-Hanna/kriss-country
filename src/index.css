@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+
+  > div {
+    cursor: pointer;
+  }
+}
+
+body.dark-mode {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+.dark-mode-button {
+  display: flex;
+
+  > p {
+    margin: 0 0.5rem;
+    font-size: 1.25rem;
+  }
+}
+
+.search-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 3rem;
+
+  > input {
+    border-radius: 5px;
+    padding: 1rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 30rem;
+    border: none;
+
+  }
+}
+
+.countries-container {
+  border: 2px solid red;
+}
+.country-card {
+  border: 2px solid black;
+  width: 100%;
+  margin: 1.5rem;
+}
