@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+body {
+  width: 100%;
+}
+
 .App-header {
   display: flex;
   justify-content: space-between;
@@ -15,6 +19,8 @@
   }
 }
 
+
+/***** Dark Mode *****/
 body.dark-mode {
   background-color: #333333;
   color: #ffffff;
@@ -29,6 +35,7 @@ body.dark-mode {
   }
 }
 
+/******** Search Inputs *****/
 .search-container {
   display: flex;
   justify-content: space-between;
@@ -45,24 +52,46 @@ body.dark-mode {
 }
 
 .countries-container {
-  border: 2px solid red;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.country-card {
-  border: 2px solid black; 
+.country-card {  
   margin: 1.5rem;
   display: flex;
   flex-direction: column;
   height: 400px;
   width: 400px;
-  
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  padding: 1rem;
+
 }
 
 .country-card:hover {
-  transition: all 0.3s ease-in-out;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
+  transform: translateY(-10px);  
+  box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
 }
+
+img {
+  width: 100%;
+}
+
+h3 {
+ margin: 3px 0;
+ font-size: 1.8rem;
+}
+
+span {
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+

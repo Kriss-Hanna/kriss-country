@@ -12,6 +12,8 @@ const CardCountry = () => {
       .catch((err) => console.log(err));
   }, [country]);
 
+  console.log(countryFetch);
+
   const {
     flags,
     name,
@@ -24,10 +26,8 @@ const CardCountry = () => {
     languages,
   } = countryFetch[0];
 
-  console.log(languages, currencies);
-
   return (
-    <div>
+    <>
       <Link to="/"> Back </Link>
 
       <div className="container">
@@ -47,12 +47,12 @@ const CardCountry = () => {
 
           <div className="right">
             <p>Top Level Domain: {tld}</p>
-            <p>Currencies: </p>
-            <p>Languages: </p>
+            <p>Currencies: {currencies.VES.name} </p>
+            <p>Languages: {languages.spa} </p>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

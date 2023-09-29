@@ -2,13 +2,19 @@ import { Link } from "react-router-dom";
 import Proptypes from "prop-types";
 
 const Countries = ({ country }) => {
-  console.log(country);
   return (
     <Link to={{ pathname: `/${country.name.common}` }}>
       <img src={country.flags.png} alt={country.name.common} />
-      <p>{country.name.common}</p>
-      <p>{country.population}</p>
-      <p>{country.capital}</p>
+      <h3>{country.name.common}</h3>
+      <p>
+        <span>Population:</span> {country.population}
+      </p>
+      <p>
+        <span>Région:</span> {country.region}
+      </p>
+      <p>
+        <span>Capital:</span> {country.capital}
+      </p>
     </Link>
   );
 };
