@@ -94,4 +94,20 @@ a {
   color: black;
 }
 
+@media screen and (max-width: 768px) {
 
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  .search-container {
+    flex-direction: column;
+    margin: 1rem auto;
+    width: 80%;
+
+    > input {
+      width: 100%;
+      margin: 1rem 0;    
+    }
+  }  
+}
