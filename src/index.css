@@ -50,6 +50,7 @@ body.dark-mode {
   flex-wrap: wrap;
   justify-content: center;
 }
+
 .country-card {
   border: 2px solid black; 
   margin: 1.5rem;
@@ -57,4 +58,11 @@ body.dark-mode {
   flex-direction: column;
   height: 400px;
   width: 400px;
+  
+}
+
+.country-card:hover {
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
 }

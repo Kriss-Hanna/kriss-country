@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
 import SearchInputs from "../components/SearchInputs";
 import Header from "../components/Header";
-import { Link } from "react-router-dom";
+import Countries from "../components/Countries";
 
 function App() {
-  const [country, setCountry] = useState([]);
+  const [countries, setCountries] = useState([]);
   const [searchCountry, setSearchCountry] = useState("");
   const [searchRegion, setSearchRegion] = useState("");
 
@@ -25,12 +25,12 @@ function App() {
   useEffect(() => {
     fetch("https://restcountries.com/v3.1/all")
       .then((res) => res.json())
-      .then((res) => setCountry(res))
+      .then((res) => setCountries(res))
       .catch((err) => console.log(err));
   }, []);
 
   // Filter by name and region
-  const filteredCountries = country.filter((c) => {
+  const filteredCountries = countries.filter((c) => {
     return (
       c.name.common.toLowerCase().includes(searchCountry.toLowerCase()) &&
       c.region.toLowerCase().includes(searchRegion.toLowerCase())
@@ -49,15 +49,10 @@ function App() {
       />
 
       <div className="countries-container">
-        {filteredCountries.map((c) => (
-          <Link to={`/${c.name.common}`} key={c.name.common}>
-            <div className="country-card" key={c.flag}>
-              <img src={c.flags.png} alt={c.name.common} />
-              <p>{c.name.common}</p>
-              <p>{c.population}</p>
-              <p>{c.capital}</p>
-            </div>
-          </Link>
+        {filteredCountries.map((country) => (
+          <div className="country-card" key={country.name.common}>
+            <Countries country={country} />
+          </div>
         ))}
       </div>
     </>
