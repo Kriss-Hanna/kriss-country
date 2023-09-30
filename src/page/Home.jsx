@@ -38,7 +38,7 @@ function App() {
   });
 
   return (
-    <>
+    <div className="container-app">
       <Header darkMode={darkMode} setDarkMode={setDarkMode} />
 
       <SearchInputs
@@ -55,7 +55,7 @@ function App() {
           </div>
         ))}
       </div>
-    </>
+    </div>
   );
 }
 

@@ -6,7 +6,6 @@ function Header({ darkMode, setDarkMode }) {
   return (
     <header className="App-header">
       <Link to="/">
-        {" "}
         <h1>Where in the world?</h1>
       </Link>
 
