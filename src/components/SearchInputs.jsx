@@ -6,19 +6,23 @@ function SearchInputs({
   searchRegion,
   setSearchRegion,
 }) {
-  const region = ["Africa", "Americas", "Asia", "Europe", "Oceania"];
+  const region = ["", "Africa", "Americas", "Asia", "Europe", "Oceania"];
 
   return (
     <div className="search-container">
-      <input
-        type="text"
-        placeholder="Search for a country"
-        value={searchCountry}
-        onInput={(e) => setSearchCountry(e.target.value)}
-      />
+      <div className="input-country-container">
+        <input
+          type="text"
+          placeholder="Search for a country"
+          value={searchCountry}
+          onChange={(e) => setSearchCountry(e.target.value)}
+        />
+        <button onClick={() => setSearchCountry("")}>X</button>
+      </div>
+
       <select
-        value={searchRegion}
-        placeholder="Filter by Region"
+        value={searchRegion || ""}
+        placeholder={searchRegion === "" && "Search for a region"}
         onChange={(e) => setSearchRegion(e.target.value)}
       >
         {region.map((region) => (
