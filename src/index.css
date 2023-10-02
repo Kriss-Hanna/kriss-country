@@ -44,16 +44,12 @@ body.dark-mode h1, body.dark-mode h3, body.dark-mode p {
 }
 
 body.dark-mode input, body.dark-mode select {
-  background-color: #212D36;
+  background-color: #2C3844;
   color: #ffffff;
 }
 
 body.dark-mode input::-moz-placeholder {
   color: #ffffff;
-}
-
-body.dark-mode.coutry-card {
-  background-color: #2C3844;
 }
 
 .dark-mode-button {
@@ -72,14 +68,7 @@ body.dark-mode.coutry-card {
   justify-content: space-between;
   margin: 3rem;
 
-  > input  {
-    border-radius: 5px;
-    padding: 1rem;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    width: 30rem;
-    border: none;
 
-  }
 
   > select {
     border-radius: 5px;
@@ -88,6 +77,30 @@ body.dark-mode.coutry-card {
     width: 19rem;
     border: none;
 
+  }
+}
+
+.input-country-container {
+
+  > input  {
+    border-radius: 5px;
+    padding: 1rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 30rem;
+    border: none;
+  }
+
+  > button {
+    padding: 0.5rem;
+    height: 100%;
+    width: 2rem;
+    background-color: lightcoral;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-left: 2px;
+    cursor: pointer;
   }
 }
 
@@ -102,7 +115,7 @@ body.dark-mode.coutry-card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 auto;
+  margin: 1rem auto;
   min-height: 100%;
   width: 400px;
   border-radius: 10px;
@@ -146,6 +159,15 @@ a {
 
   h1 {
     font-size: 1.2rem;
+  }
+
+  .input-country-container {
+    display: flex;
+    margin: 1em;
+
+    > button{
+      height: 100%;
+    }
   }
 
   .search-container {
