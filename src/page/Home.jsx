@@ -49,15 +49,19 @@ function App() {
       />
 
       <div className="countries-container">
-        {filteredCountries.map((country) => (
-          <div
-            className="country-card"
-            style={{ backgroundColor: darkMode && "#2C3844" }}
-            key={country.name.common}
-          >
-            <Countries country={country} />
-          </div>
-        ))}
+        {countries ? (
+          filteredCountries.map((country) => (
+            <div
+              className="country-card"
+              style={{ backgroundColor: darkMode && "#2C3844" }}
+              key={country.name.common}
+            >
+              <Countries country={country} />
+            </div>
+          ))
+        ) : (
+          <div>Loading ...</div>
+        )}
       </div>
     </div>
   );
