@@ -4,7 +4,11 @@ import Proptypes from "prop-types";
 const Countries = ({ country }) => {
   return (
     <Link to={{ pathname: `/${country.name.common}` }}>
-      <img src={country.flags.png} alt={country.name.common} />
+      <img
+        className="flag-card"
+        src={country.flags.png}
+        alt={country.name.common}
+      />
       <h3>{country.name.common}</h3>
       <p>
         <span>Population:</span> {country.population}
