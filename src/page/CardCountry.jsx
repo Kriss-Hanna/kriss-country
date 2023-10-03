@@ -32,8 +32,6 @@ const CardCountry = () => {
     languages,
   } = countryDetails;
 
-  console.log(countryDetails);
-
   return (
     <>
       <div className="container-details">
@@ -70,10 +68,12 @@ const CardCountry = () => {
                 <span>Top Level Domain:</span> {tld && tld}
               </p>
               <p>
-                <span>Currencies:</span> {currencies?.VES?.name}{" "}
+                <span>Currencies: </span>
+                {currencies && Object.keys(currencies)[0]}
               </p>
               <p>
-                <span>Languages:</span> {languages?.fra}{" "}
+                <span>Languages: </span>
+                {languages && Object.keys(languages)[0]}
               </p>
             </div>
           </div>
