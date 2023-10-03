@@ -155,6 +155,27 @@ a {
   color: black;
 }
 
+
+/****** Page country  Details ********/
+
+.container-details {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 80vh;
+}
+
+.info-container {
+  display: flex;
+
+
+  > span {
+    font-weight: 500;
+  }
+}
+
+
+
 @media screen and (max-width: 768px) {
 
   h1 {

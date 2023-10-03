@@ -3,6 +3,8 @@ import { Link, useParams } from "react-router-dom";
 
 const CardCountry = () => {
   const [countryFetch, setCountryFetch] = useState([]);
+  const [countryDetails, setCountryDetails] = useState({});
+
   const { country } = useParams();
 
   useEffect(() => {
@@ -12,7 +14,11 @@ const CardCountry = () => {
       .catch((err) => console.log(err));
   }, [country]);
 
-  console.log(countryFetch);
+  useEffect(() => {
+    if (countryFetch[0]) {
+      setCountryDetails(countryFetch[0]);
+    }
+  }, [countryFetch]);
 
   const {
     flags,
@@ -24,31 +30,49 @@ const CardCountry = () => {
     tld,
     currencies,
     languages,
-  } = countryFetch[0];
+  } = countryDetails;
+
+  console.log(countryDetails);
 
   return (
     <>
       <Link to="/"> Back </Link>
 
-      <div className="container">
+      <div className="container-details">
         <div className="img-container">
-          <img src={flags.png} alt={name.common} />
+          <img src={flags?.png} alt={name?.common} />
         </div>
 
         <div className="info-container">
           <div className="left">
-            <h3>{name.common}</h3>
-            <p>Native Name: {name.common}</p>
-            <p>Population: {population}</p>
-            <p>Region: {region}</p>
-            <p>Sub Region: {subregion}</p>
-            <p>CapitalRegion: {capital}</p>
+            <h3>{name?.common}</h3>
+            <p>
+              <span>Native Name:</span> {name?.common}
+            </p>
+            <p>
+              <span>Population:</span> {population && population}
+            </p>
+            <p>
+              <span>Region:</span> {region && region}
+            </p>
+            <p>
+              <span>Sub Region:</span> {subregion && subregion}
+            </p>
+            <p>
+              <span>CapitalRegion:</span> {capital && capital}
+            </p>
           </div>
 
           <div className="right">
-            <p>Top Level Domain: {tld}</p>
-            <p>Currencies: {currencies.VES.name} </p>
-            <p>Languages: {languages.spa} </p>
+            <p>
+              <span>Top Level Domain:</span> {tld && tld}
+            </p>
+            <p>
+              <span>Currencies:</span> {currencies?.VES?.name}{" "}
+            </p>
+            <p>
+              <span>Languages:</span> {languages?.fra}{" "}
+            </p>
           </div>
         </div>
       </div>

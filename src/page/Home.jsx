@@ -1,25 +1,12 @@
 import { useState, useEffect } from "react";
 import SearchInputs from "../components/SearchInputs";
-import Header from "../components/Header";
 import Countries from "../components/Countries";
+import Proptypes from "prop-types";
 
-function App() {
+function App({ darkMode }) {
   const [countries, setCountries] = useState([]);
   const [searchCountry, setSearchCountry] = useState("");
   const [searchRegion, setSearchRegion] = useState("");
-
-  //Dark mode
-  const savedMode = localStorage.getItem("dark-mode");
-  const [darkMode, setDarkMode] = useState(savedMode === "true" ? true : false);
-
-  useEffect(() => {
-    localStorage.setItem("dark-mode", darkMode);
-    if (darkMode) {
-      document.body.classList.add("dark-mode");
-    } else {
-      document.body.classList.remove("dark-mode");
-    }
-  }, [darkMode]);
 
   // Fetch data from API
   useEffect(() => {
@@ -39,8 +26,6 @@ function App() {
 
   return (
     <div className="container-app">
-      <Header darkMode={darkMode} setDarkMode={setDarkMode} />
-
       <SearchInputs
         searchCountry={searchCountry}
         setSearchCountry={setSearchCountry}
@@ -68,3 +53,7 @@ function App() {
 }
 
 export default App;
+
+App.propTypes = {
+  darkMode: Proptypes.bool,
+};
