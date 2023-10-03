@@ -23,7 +23,7 @@ const App = () => {
       <Header darkMode={darkMode} setDarkMode={setDarkMode} />
       <Routes>
         <Route path="/" element={<Home darkMode={darkMode} />} />
-        <Route path="/:country" element={<CardCountry />} />
+        <Route path="/:country" element={<CardCountry darkMode={darkMode} />} />
       </Routes>
     </>
   );

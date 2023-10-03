@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
+import Proptypes from "prop-types";
 
-const CardCountry = () => {
+const CardCountry = ({ darkMode }) => {
   const [countryFetch, setCountryFetch] = useState([]);
   const [countryDetails, setCountryDetails] = useState({});
 
@@ -35,7 +36,14 @@ const CardCountry = () => {
   return (
     <>
       <div className="container-details">
-        <Link className="back" to="/">
+        <Link
+          style={{
+            backgroundColor: darkMode && "#2C3844",
+            color: darkMode && "white",
+          }}
+          className="back"
+          to="/"
+        >
           Back
         </Link>
         <div className="img-container">
@@ -84,3 +92,7 @@ const CardCountry = () => {
 };
 
 export default CardCountry;
+
+CardCountry.propTypes = {
+  darkMode: Proptypes.bool,
+};
