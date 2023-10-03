@@ -36,43 +36,46 @@ const CardCountry = () => {
 
   return (
     <>
-      <Link to="/"> Back </Link>
-
       <div className="container-details">
+        <Link className="back" to="/">
+          Back
+        </Link>
         <div className="img-container">
           <img src={flags?.png} alt={name?.common} />
         </div>
 
         <div className="info-container">
-          <div className="left">
-            <h3>{name?.common}</h3>
-            <p>
-              <span>Native Name:</span> {name?.common}
-            </p>
-            <p>
-              <span>Population:</span> {population && population}
-            </p>
-            <p>
-              <span>Region:</span> {region && region}
-            </p>
-            <p>
-              <span>Sub Region:</span> {subregion && subregion}
-            </p>
-            <p>
-              <span>CapitalRegion:</span> {capital && capital}
-            </p>
-          </div>
+          <h3>{name?.common}</h3>
+          <div className="details-container">
+            <div className="left">
+              <p>
+                <span>Native Name:</span> {name?.common}
+              </p>
+              <p>
+                <span>Population:</span> {population && population}
+              </p>
+              <p>
+                <span>Region:</span> {region && region}
+              </p>
+              <p>
+                <span>Sub Region:</span> {subregion && subregion}
+              </p>
+              <p>
+                <span>CapitalRegion:</span> {capital && capital}
+              </p>
+            </div>
 
-          <div className="right">
-            <p>
-              <span>Top Level Domain:</span> {tld && tld}
-            </p>
-            <p>
-              <span>Currencies:</span> {currencies?.VES?.name}{" "}
-            </p>
-            <p>
-              <span>Languages:</span> {languages?.fra}{" "}
-            </p>
+            <div className="right">
+              <p>
+                <span>Top Level Domain:</span> {tld && tld}
+              </p>
+              <p>
+                <span>Currencies:</span> {currencies?.VES?.name}{" "}
+              </p>
+              <p>
+                <span>Languages:</span> {languages?.fra}{" "}
+              </p>
+            </div>
           </div>
         </div>
       </div>
